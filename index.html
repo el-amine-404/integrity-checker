@@ -1,55 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="./assets/icons/favicon.svg"
+      sizes="any"
+      type="image/svg+xml"
+    />
+    <link rel="stylesheet" href="./assets/styles/modern-normalize.css" />
+    <link rel="stylesheet" href="./assets/styles/style.css" />
+    <title>Integrity checker</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="./assets/icons/favicon.svg" sizes="any" type="image/svg+xml">
-  <link rel="stylesheet" href="./assets/styles/modern-normalize.css">
-  <link rel="stylesheet" href="./assets/styles/style.css">
-  <title>Integrity checker</title>
-</head>
+  <body>
+    <header class="header container">
+      <nav class="nav">
+        <ul class="nav-left">
+          <img
+            class="page__icon"
+            src="./assets/icons/favicon.svg"
+            alt="Integrity checker icon"
+          />
+          <li class="nav-link nobullets">
+            <a class="page__title nodefaultlinks" href="#">INTEGRITY CHECK</a>
+          </li>
+          <p>v 1.0</p>
+        </ul>
 
-<body>
+        <ul class="nav-right">
+          <li class="nav-link nobullets">
+            <a class="nodefaultlinks" href="#get-started">Get started</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-  <header class="header container">
-
-    <nav class="nav">
-
-      <ul class="nav-left">
-        <img class="page__icon" src="./assets/icons/favicon.svg" alt="Integrity checker icon"/>
-        <li class="nav-link nobullets">
-          <a class="page__title nodefaultlinks" href="#">INTEGRITY CHECK</a>
-        </li>
-      </ul>
-
-      <ul class="nav-right">
-        <li class="nav-link nobullets">
-          <a class="nodefaultlinks" href="#get-started">Get started</a>
-        </li>
-      </ul>
-
-    </nav>
-  </header>
-
-  <main>
-    <section class="hero container">
-      <div>
-        <h1 class="hero__title">Verifiy File Integrity<br>With Confidence</h1>
-        <p class="hero__description">Ensure the Security and Integrity of Your
-          Files <br>Hassle-Free. No Installation required All<br>
-          Inside your browser</p>
+    <main>
+      <section class="hero container">
+        <div class="hero__text">
+          <h1 class="hero__title">Verify File Integrity With Confidence</h1>
+          <p class="hero__description">
+            Ensure the Security and Integrity of Your Files <br />Hassle-Free.
+            No Installation required All<br />
+            Inside your browser
+          </p>
           <div class="hero_buttons">
-            <a class="nodefaultlinks fill__button" href="#get-started">Get Started</a>
+            <a class="nodefaultlinks fill__button" href="#get-started"
+              >Get Started</a
+            >
             <a class="nodefaultlinks ghost__button" href="#faqs">FAQs</a>
           </div>
-      </div>
+        </div>
+        <div class="hero__img">
+          <img
+            class="hero__img"
+            src="./assets/images/data-security-no-bg.png"
+            alt="Data Security vector illustration"
+          />
+        </div>
+      </section>
 
-      <img class="hero__img" src="./assets/images/data-security-no-bg.png" alt="Data Security vector illustration" />
+      <section id="get-started" class="container form">
+        <p>ARE YOU READY ?</p>
+        <h1>Take A Step Up And Check Your Downloaded Files</h1>
+        <label for="file" class="custom-file-upload"
+          ><i class="fa fa-cloud-upload"></i> Choose file to hash</label
+        >
+        <input type="file" id="file" name="file" multiple required />
+        <label for="select-hash-function">Choose Algorithm/Hash function</label>
+        <select
+          class="select"
+          name="select-hash-function"
+          id="select-hash-function"
+        >
+          <option class="selectopt" value="SHA-1">SHA-1</option>
+          <option class="selectopt" value="SHA-256">SHA-256</option>
+          <option class="selectopt" value="SHA-384">SHA-384</option>
+          <option class="selectopt" value="SHA-512">SHA-512</option>
+        </select>
+        <label for="result__file-hash">Computed Hash</label>
+        <output id="result__file-hash" class="result__file-hash"></output>
+      </section>
 
-    </section>
-  </main>
+      <section id="faqs" class="container faqs">
+        <h1>Frequently Asked Questions</h1>
 
-</body>
+        <p>
+          A rule of thumb in Cybersecurity is to never trust a website or a tool
+          that claims a service. Always do your investigation and ASK QUESTIONS.
+          For that reason we listed this FAQs below so you can use our website
+          without worrying
+        </p>
 
+        <p>
+          Fun fact, This website was created as an answer to my requirements and
+          question. Every time i needed to verify integrity of a file i should
+          google the specific commands to follow, when i did a search about
+          online tools that can make my life easier i was not happy with the
+          performance. Some website even send the file to a server
+        </p>
+
+        <details>
+          <summary>Why using our website ?</summary>
+          <div>
+            <ul>
+              <li>
+                Web based wich means it is cross platform, no more instructions
+                for windows, for mac os, for linux, ...
+              </li>
+              <li>
+                Intuitive and easy to use UI, no more scary command line
+                commands
+              </li>
+              <li>No download, no configuration required, all browser based</li>
+              <li>
+                Your file never leaves your device, it is not uploaded to any
+                server all the magic happens inside the browser
+              </li>
+              <li>
+                No third party JS libraries, nowadays modern browsers have a
+                native crypto module, wich boost performance and security.
+              </li>
+              <li>
+                Our website is entirely open source, You do not need to take my
+                words for granted. with a little bit knowledge of web
+                technologies (HTML,CSS,JS) you can understand the code that runs
+                this website and be sure of the above claims
+              </li>
+            </ul>
+          </div>
+        </details>
+
+        <details>
+          <summary>why should i check my download file integrity ?</summary>
+          <div>
+            <ul>
+              <li>
+                Ensures that the file you downloaded is identical to the one the
+                creator intended to share. It protects against potential data
+                corruption during the download process.
+              </li>
+              <li>
+                Helps prevent the installation of compromised or malicious
+                software. If a file has been tampered with, it may contain
+                malware or other security threats.
+              </li>
+            </ul>
+          </div>
+        </details>
+
+        <details>
+          <summary>
+            Where i can find the original checksum of my download ?
+          </summary>
+          <div>
+            <ul>
+              <li>
+                Check the official website or repository where you are
+                downloading the file. Often, developers provide checksums
+                alongside the download links.
+              </li>
+              <li>
+                Look for release notes or announcements related to the download.
+                Creators may publish checksums along with version information.
+              </li>
+            </ul>
+          </div>
+        </details>
+
+        <details>
+          <summary>Have a question in mind not listed here ?</summary>
+          <div>
+            <ul>
+              <li>
+                Feel free to reach us on <a href="">Github</a> or
+                <a href="">Discord</a>, or contact me directly in my
+                <a href="">linkedin</a>
+              </li>
+            </ul>
+          </div>
+        </details>
+
+        <details>
+          <summary>Next Step ?</summary>
+          <div>
+            <ul>
+              <li>
+                you have verified the file integrity the next step is to verify
+                its authenticity &#128517;
+              </li>
+            </ul>
+          </div>
+        </details>
+
+        <details>
+          <summary>Like this website ?</summary>
+          <div>
+            <ul>
+              <li>Star it on github</li>
+              <li>Share it on social media</li>
+              <li>Talk about it to your friends, family ...</li>
+              <li>want to be cool ? send me a nice comment</li>
+              <li>want to be extra cool ? Donate &#128525;</li>
+            </ul>
+          </div>
+        </details>
+      </section>
+    </main>
+
+    <footer class="container footer">
+      <ul class="footer__socials">
+        <hr />
+        <li>
+          <a class="nodefaultlinks" href="https://github.com/" target="_blank">
+            <i class="fa-brands fa-github fa-2xl"></i>
+          </a>
+        </li>
+        <li>
+          <a class="nodefaultlinks" href="https://discord.com/" target="_blank">
+            <i class="fa-brands fa-discord fa-2xl"></i>
+          </a>
+        </li>
+        <hr />
+      </ul>
+      <p>
+        Copyright &copy; 2024 | Made with
+        <span class="heart-unicode">&#10084;</span> by Amine EL HOUJJAJI
+      </p>
+    </footer>
+
+    <script src="./assets/scripts/script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/73df209334.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
