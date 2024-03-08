@@ -13,6 +13,8 @@ This section list the features that need to be implemented in the future
 - [ ] Optimize images for the web
 - [ ] Deploy the website
 - [ ] Optimize the html, css, js file sizes
+- [ ] add a proper drag && drop region 🤣
+- [ ] add an animation while the file gets processed
 - [ ] Decrease the number of requests made by the browser:
     - [ ] download all the font-awesome icons used
     - [ ] reduce the number of `link` in html (not sure)
