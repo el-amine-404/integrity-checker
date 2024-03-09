@@ -516,6 +516,11 @@ Another way to do the same effect is the following
 
 .footer__socials li {
   list-style: none;
+  transition: 0.5s;
+}
+
+.footer__socials li:hover {
+  transform: translateY(-10px);
 }
 
 .footer__socials hr {
