@@ -6,6 +6,34 @@ const processingAnimation = document.getElementById("processingAnimation");
 
 let selectedHashFunction = "SHA-1"; // Default hash function
 
+let dropbox;
+
+dropbox = document.getElementById("dropbox");
+dropbox.addEventListener("dragenter", dragenter, false);
+dropbox.addEventListener("dragover", dragover, false);
+dropbox.addEventListener("drop", drop, false);
+
+function dragenter(e) {
+  e.stopPropagation();
+  e.preventDefault();
+}
+
+function dragover(e) {
+  e.stopPropagation();
+  e.preventDefault();
+}
+
+function drop(e) {
+  e.stopPropagation();
+  e.preventDefault();
+
+  const dt = e.dataTransfer;
+  file.files = dt.files;
+
+  hashFilesAndUpdateOutput();
+}
+
+
 // Run the hashing function when the user selects one or more files or changes the hash function
 file.addEventListener("change", hashFilesAndUpdateOutput);
 document
