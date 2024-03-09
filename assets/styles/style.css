@@ -8,7 +8,6 @@
   line-height: calc(1em + 0.5rem);
 }
 
-
 img,
 picture,
 video,
@@ -176,22 +175,14 @@ BLOCK: hero
 =====
 */
 
-
-
-
 /* || MODIFIERS */
 /* incremental style changes */
 
 /* Blocks with modifiers */
 
-
 /* || ELEMENTS */
 /* No standalone meaning - semantically tied to the block */
 /* Does not represent HTML structure (nested elements) */
-
-
-
-
 
 .hero {
   display: flex;
@@ -199,8 +190,6 @@ BLOCK: hero
   justify-content: space-between;
   gap: 1rem;
 }
-
-
 
 .hero__wrapper-title-desc-btn {
   display: flex;
@@ -244,7 +233,6 @@ BLOCK: hero
   color: var(--clr-dark);
 }
 
-
 /*
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -253,7 +241,6 @@ BLOCK: hero
 BLOCK: form
 =====
 */
-
 
 .form {
   display: flex;
@@ -269,7 +256,6 @@ BLOCK: form
   border-radius: 30px;
   padding: 1.5rem 2rem;
 }
-
 
 .form__element {
   width: 100%;
@@ -290,7 +276,6 @@ BLOCK: form
   color: var(--clr-blue);
 }
 
-
 .visually-hidden {
   position: absolute !important;
   height: 1px;
@@ -308,7 +293,7 @@ BLOCK: form
   padding: 3rem 0;
   cursor: pointer;
   text-align: center;
-  margin-bottom: .1rem;
+  margin-bottom: 0.1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -326,7 +311,7 @@ BLOCK: form
 }
 
 .form__number-of-files {
-  font-size: .8rem;
+  font-size: 0.8rem;
   font-weight: 400;
   color: var(--clr-light);
   margin-bottom: 2rem;
@@ -407,12 +392,10 @@ BLOCK: form
   background: #555;
 }
 
-
 /*
 
 **************************************************************************************
 */
-
 
 .faqs {
   display: flex;
@@ -428,7 +411,6 @@ BLOCK: form
 .faqs__description {
   text-align: justify;
 }
-
 
 .faqs__details {
   /* From https://css.glass */
@@ -468,7 +450,6 @@ BLOCK: form
   content: "\00D7";
 }
 
-
 .faqs__answer {
   /* instead of adding left padding to the div i decided to add left margin to the li element */
   margin-left: 3rem;
@@ -480,7 +461,6 @@ BLOCK: form
   padding-right: 1rem;
   list-style-type: "\1F449   ";
 }
-
 
 /*
 list-style-type is simpler but another way to do that is
@@ -494,13 +474,13 @@ Another way to do the same effect is the following
 
 .faqs li::before {
   content: '\1F449 ';
-} */
+}
+*/
 
 /*
 
 ***************************************************************************************
 */
-
 
 .footer {
   margin-bottom: 0;
@@ -541,7 +521,7 @@ Another way to do the same effect is the following
   text-align: center;
   user-select: none;
   display: flex;
-  gap: .1em;
+  gap: 0.1em;
 }
 
 .footer__icon {
