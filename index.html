@@ -11,19 +11,19 @@
 </head>
 
 <body>
-  <header class="header container">
-    <nav class="nav">
-      <ul class="nav-left">
-        <img class="page__icon" src="./assets/icons/favicon.svg" alt="Integrity checker icon" />
-        <li class="nav-link nobullets">
-          <a class="page__title nodefaultlinks" href="#">INTEGRITY CHECK</a>
-        </li>
-        <p>v 1.0</p>
-      </ul>
 
-      <ul class="nav-right">
-        <li class="nav-link nobullets">
-          <a class="nodefaultlinks" href="#get-started">Get started</a>
+  <header class="container header">
+    <nav class="header__nav">
+      <ul class="header__left-nav">
+        <img class="header__icon" src="./assets/icons/favicon.svg" alt="Integrity checker icon" />
+        <li class="header__link li">
+          <a class="a header__title" href="?">INTEGRITY CHECK</a>
+        </li>
+        <p class="header__verion">v 1.0</p>
+      </ul>
+      <ul class="header__right-nav">
+        <li class="header__link li">
+          <a class="a a--underline" href="#get-started">Get started</a>
         </li>
       </ul>
     </nav>
@@ -31,61 +31,59 @@
 
   <main>
     <section class="hero container">
-      <div class="hero__text">
+      <div class="hero__wrapper-title-desc-btn">
         <h1 class="hero__title">Verify File Integrity With Confidence</h1>
         <p class="hero__description">
           Ensure the Security and Integrity of Your Files <br />Hassle-Free.
           No Installation required All<br />
           Inside your browser
         </p>
-        <div class="hero_buttons">
-          <a class="nodefaultlinks fill__button" href="#get-started">Get Started</a>
-          <a class="nodefaultlinks ghost__button" href="#faqs">FAQs</a>
+        <div class="hero__wrapper-buttons">
+          <a class="a hero__btn--fill" href="#get-started">Get Started</a>
+          <a class="a hero__btn--ghost" href="#faqs">FAQs</a>
         </div>
       </div>
-      <div class="hero__img">
-        <img class="hero__img" src="./assets/images/data-security-no-bg.png" alt="Data Security vector illustration" />
+      <div>
+        <img src="./assets/images/data-security-no-bg.png" alt="Data Security vector illustration" />
       </div>
     </section>
 
-    <section id="get-started" class="container form">
-      <p>ARE YOU READY ?</p>
-      <h1>Take A Step Up And Check Your Downloaded Files</h1>
-      <label id="dropbox" for="file" class="custom-file-upload"><i class="fa fa-cloud-upload"></i> <p>Click to choose file(s) to hash</p><p>Or drag and drop</p></label>
-      <input type="file" id="file" name="file" multiple required />
-      <p id="num-of-files">No Files Selected</p>
-      <ul id="files-list"></ul>
-      <label for="select-hash-function">Choose Algorithm/Hash function</label>
-      <select class="select" name="select-hash-function" id="select-hash-function">
+    <section id="get-started" class="form container">
+      <h2 class="form__element form__title">ARE YOU READY ?</h2>
+      <h3 class="form__element form__sub-title">Take A Step Up And Check Your Downloaded Files</h3>
+      <label class="form__element form__wrapper-drop-zone" id="form__wrapper-drop-zone" for="form__input-file">
+        <i class="fa fa-cloud-upload form__drop-zone-icon"></i>
+        <p class="form__element form__drop-zone-text">Click to choose file(s) to hash<br>Or drag and drop</p>
+      </label>
+      <input class="form__element form__input-file" type="file" id="form__input-file" name="file" multiple required />
+      <p id="form__number-of-files" class="form__element form__number-of-files">No Files Selected</p>
+      <ul id="form__wrapper-file-list" class="form__element form__wrapper-file-list"></ul>
+      <label class="form__element form__label-hash" for="form__select-hash">Choose Algorithm/Hash function</label>
+      <select class="form__element form__select-hash" name="form__select-hash" id="form__select-hash">
         <option class="selectopt" value="SHA-1">SHA-1</option>
         <option class="selectopt" value="SHA-256">SHA-256</option>
         <option class="selectopt" value="SHA-384">SHA-384</option>
         <option class="selectopt" value="SHA-512">SHA-512</option>
       </select>
-      <div class="label_animation">
-        <label id="label_result__file-hash"for="result__file-hash">Computed Hashe</label>
-        <!-- SOURCE:
-        https://www.svgbackgrounds.com/ -->
-        <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 150"><path fill="none" stroke="#66B9FF" stroke-width="15" stroke-linecap="round" stroke-dasharray="300 385" stroke-dashoffset="0" d="M275 75c0 31-27 50-50 50-58 0-92-100-150-100-28 0-50 22-50 50s23 50 50 50c58 0 92-100 150-100 24 0 50 19 50 50Z"><animate attributeName="stroke-dashoffset" calcMode="spline" dur="2" values="685;-685" keySplines="0 0 1 1" repeatCount="indefinite"></animate></path></svg> -->
-        <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><circle fill="#66B9FF" stroke="#66B9FF" stroke-width="15" r="15" cx="40" cy="65"><animate attributeName="cy" calcMode="spline" dur="2" values="65;135;65;" keySplines=".5 0 .5 1;.5 0 .5 1" repeatCount="indefinite" begin="-.4"></animate></circle><circle fill="#66B9FF" stroke="#66B9FF" stroke-width="15" r="15" cx="100" cy="65"><animate attributeName="cy" calcMode="spline" dur="2" values="65;135;65;" keySplines=".5 0 .5 1;.5 0 .5 1" repeatCount="indefinite" begin="-.2"></animate></circle><circle fill="#66B9FF" stroke="#66B9FF" stroke-width="15" r="15" cx="160" cy="65"><animate attributeName="cy" calcMode="spline" dur="2" values="65;135;65;" keySplines=".5 0 .5 1;.5 0 .5 1" repeatCount="indefinite" begin="0"></animate></circle></svg> -->
-        <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><path fill="#66B9FF" stroke="#66B9FF" stroke-width="15" transform-origin="center" d="m148 84.7 13.8-8-10-17.3-13.8 8a50 50 0 0 0-27.4-15.9v-16h-20v16A50 50 0 0 0 63 67.4l-13.8-8-10 17.3 13.8 8a50 50 0 0 0 0 31.7l-13.8 8 10 17.3 13.8-8a50 50 0 0 0 27.5 15.9v16h20v-16a50 50 0 0 0 27.4-15.9l13.8 8 10-17.3-13.8-8a50 50 0 0 0 0-31.7Zm-47.5 50.8a35 35 0 1 1 0-70 35 35 0 0 1 0 70Z"><animateTransform type="rotate" attributeName="transform" calcMode="spline" dur="2" values="0;120" keyTimes="0;1" keySplines="0 0 1 1" repeatCount="indefinite"></animateTransform></path></svg> -->
-        <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><radialGradient id="a10" cx=".66" fx=".66" cy=".3125" fy=".3125" gradientTransform="scale(1.5)"><stop offset="0" stop-color="#66B9FF"></stop><stop offset=".3" stop-color="#66B9FF" stop-opacity=".9"></stop><stop offset=".6" stop-color="#66B9FF" stop-opacity=".6"></stop><stop offset=".8" stop-color="#66B9FF" stop-opacity=".3"></stop><stop offset="1" stop-color="#66B9FF" stop-opacity="0"></stop></radialGradient><circle transform-origin="center" fill="none" stroke="url(#a10)" stroke-width="15" stroke-linecap="round" stroke-dasharray="200 1000" stroke-dashoffset="0" cx="100" cy="100" r="70"><animateTransform type="rotate" attributeName="transform" calcMode="spline" dur="0.6" values="360;0" keyTimes="0;1" keySplines="0 0 1 1" repeatCount="indefinite"></animateTransform></circle><circle transform-origin="center" fill="none" opacity=".2" stroke="#66B9FF" stroke-width="15" stroke-linecap="round" cx="100" cy="100" r="70"></circle></svg> -->
-        <svg id="processingAnimation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><radialGradient id="a10" cx=".66" fx=".66" cy=".3125" fy=".3125" gradientTransform="scale(1.5)"><stop offset="0" stop-color="#66B9FF"></stop><stop offset=".3" stop-color="#66B9FF" stop-opacity=".9"></stop><stop offset=".6" stop-color="#66B9FF" stop-opacity=".6"></stop><stop offset=".8" stop-color="#66B9FF" stop-opacity=".3"></stop><stop offset="1" stop-color="#66B9FF" stop-opacity="0"></stop></radialGradient><circle transform-origin="center" fill="none" stroke="url(#a10)" stroke-width="30" stroke-linecap="round" stroke-dasharray="200 1000" stroke-dashoffset="0" cx="100" cy="100" r="70"><animateTransform type="rotate" attributeName="transform" calcMode="spline" dur="0.6" values="360;0" keyTimes="0;1" keySplines="0 0 1 1" repeatCount="indefinite"></animateTransform></circle><circle transform-origin="center" fill="none" opacity=".2" stroke="#66B9FF" stroke-width="30" stroke-linecap="round" cx="100" cy="100" r="70"></circle></svg>
+      <div class="form__element form__wrapper-label-animation">
+        <label id="form__label-output-file-hash" class="form__label-output-file-hash" for="form__output-file-hash">Computed Hash</label>
+        <!-- SOURCE: https://www.svgbackgrounds.com/ -->
+        <svg class="svg svg--small form__svg-animation-loading" id="form__svg-animation-loading" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><radialGradient id="a10" cx=".66" fx=".66" cy=".3125" fy=".3125" gradientTransform="scale(1.5)"><stop offset="0" stop-color="#66B9FF"></stop><stop offset=".3" stop-color="#66B9FF" stop-opacity=".9"></stop><stop offset=".6" stop-color="#66B9FF" stop-opacity=".6"></stop><stop offset=".8" stop-color="#66B9FF" stop-opacity=".3"></stop><stop offset="1" stop-color="#66B9FF" stop-opacity="0"></stop></radialGradient><circle transform-origin="center" fill="none" stroke="url(#a10)" stroke-width="30" stroke-linecap="round" stroke-dasharray="200 1000" stroke-dashoffset="0" cx="100" cy="100" r="70"><animateTransform type="rotate" attributeName="transform" calcMode="spline" dur="0.6" values="360;0" keyTimes="0;1" keySplines="0 0 1 1" repeatCount="indefinite"></animateTransform></circle><circle transform-origin="center" fill="none" opacity=".2" stroke="#66B9FF" stroke-width="30" stroke-linecap="round" cx="100" cy="100" r="70"></circle></svg>
       </div>
-      <output id="result__file-hash" class="result__file-hash"></output>
+      <output class="form__element form__output-file-hash" id="form__output-file-hash"></output>
     </section>
 
-    <section id="faqs" class="container faqs">
-      <h1>Frequently Asked Questions</h1>
+    <section id="faqs" class="faqs container">
+      <h2 class="faqs__title">Frequently Asked Questions</h2>
 
-      <p>
+      <p class="faqs__description">
         A rule of thumb in Cybersecurity is to never trust a website or a tool
         that claims a service. Always do your investigation and ASK QUESTIONS.
         For that reason we listed this FAQs below so you can use our website
         without worrying
       </p>
 
-      <p>
+      <p class="faqs__description">
         Fun fact, This website was created as an answer to my requirements and
         question. Every time i needed to verify integrity of a file i should
         google the specific commands to follow, when i did a search about
@@ -93,130 +91,130 @@
         performance. Some website even send the file to a server
       </p>
 
-      <details>
-        <summary>Why using our website ?</summary>
-        <div>
-          <ul>
-            <li>
+      <details  class="faqs__details" class="faqs__details">
+        <summary class="faqs__summary">Why using our website ?</summary>
+
+          <ul class="faqs__wrapper-answers">
+            <li class="faqs__answer">
               Web based wich means it is cross platform, no more instructions
               for windows, for mac os, for linux, ...
             </li>
-            <li>
+            <li class="faqs__answer">
               Intuitive and easy to use UI, no more scary command line
               commands
             </li>
-            <li>No download, no configuration required, all browser based</li>
-            <li>
+            <li class="faqs__answer">No download, no configuration required, all browser based</li>
+            <li class="faqs__answer">
               Your file never leaves your device, it is not uploaded to any
               server all the magic happens inside the browser
             </li>
-            <li>
+            <li class="faqs__answer">
               No third party JS libraries, nowadays modern browsers have a
               native crypto module, wich boost performance and security.
             </li>
-            <li>
+            <li class="faqs__answer">
               Our website is entirely open source, You do not need to take my
               words for granted. with a little bit knowledge of web
               technologies (HTML,CSS,JS) you can understand the code that runs
               this website and be sure of the above claims
             </li>
           </ul>
-        </div>
+
       </details>
 
-      <details>
-        <summary>why should i check my download file integrity ?</summary>
-        <div>
-          <ul>
-            <li>
+      <details  class="faqs__details">
+        <summary class="faqs__summary">why should i check my download file integrity ?</summary>
+
+          <ul class="faqs__wrapper-answers">
+            <li class="faqs__answer">
               Ensures that the file you downloaded is identical to the one the
               creator intended to share. It protects against potential data
               corruption during the download process.
             </li>
-            <li>
+            <li class="faqs__answer">
               Helps prevent the installation of compromised or malicious
               software. If a file has been tampered with, it may contain
               malware or other security threats.
             </li>
           </ul>
-        </div>
+
       </details>
 
-      <details>
-        <summary>
+      <details  class="faqs__details">
+        <summary class="faqs__summary">
           Where i can find the original checksum of my download ?
         </summary>
-        <div>
-          <ul>
-            <li>
+          <ul class="faqs__wrapper-answers">
+            <li class="faqs__answer">
               Check the official website or repository where you are
               downloading the file. Often, developers provide checksums
               alongside the download links.
             </li>
-            <li>
+            <li class="faqs__answer">
               Look for release notes or announcements related to the download.
               Creators may publish checksums along with version information.
             </li>
           </ul>
-        </div>
       </details>
 
-      <details>
-        <summary>Have a question in mind not listed here ?</summary>
-        <div>
-          <ul>
-            <li>
+      <details  class="faqs__details">
+        <summary class="faqs__summary">Have a question in mind not listed here ?</summary>
+
+          <ul class="faqs__wrapper-answers">
+            <li class="faqs__answer">
               Feel free to reach us on <a href="">Github</a> or
               <a href="">Discord</a>, or contact me directly in my
               <a href="">linkedin</a>
             </li>
           </ul>
-        </div>
+
       </details>
 
-      <details>
-        <summary>Next Step ?</summary>
-        <div>
-          <ul>
-            <li>
+      <details  class="faqs__details">
+        <summary class="faqs__summary">Next Step ?</summary>
+
+          <ul class="faqs__wrapper-answers">
+            <li class="faqs__answer">
               you have verified the file integrity the next step is to verify
               its authenticity &#128517;
             </li>
           </ul>
-        </div>
+
       </details>
 
-      <details>
-        <summary>Like this website ?</summary>
-        <div>
-          <ul>
-            <li>Star it on github</li>
-            <li>Share it on social media</li>
-            <li>Talk about it to your friends, family ...</li>
-            <li>want to be cool ? send me a nice comment</li>
-            <li>want to be extra cool ? Donate &#128525;</li>
+      <details  class="faqs__details">
+        <summary class="faqs__summary">Like this website ?</summary>
+          <ul class="faqs__wrapper-answers">
+            <li class="faqs__answer">Star it on github</li>
+            <li class="faqs__answer">Share it on social media</li>
+            <li class="faqs__answer">Talk about it to your friends, family ...</li>
+            <li class="faqs__answer">want to be cool ? send me a nice comment</li>
+            <li class="faqs__answer">want to be extra cool ? Donate &#128525;</li>
           </ul>
-        </div>
+
       </details>
     </section>
   </main>
 
-  <footer class="container footer">
-    <ul class="footer__socials">
-      <hr />
-      <li>
-        <a class="nodefaultlinks" href="https://github.com/" target="_blank">
+  <footer class="footer container">
+    <div class="footer__wrapper-hr-links">
+
+      <hr class="footer__line"/>
+      <ul class="footer__social-links">
+        <li class="footer__social-link">
+          <a class="a footer__social-link-github" href="https://github.com/" target="_blank">
           <i class="fa-brands fa-github fa-2xl"></i>
         </a>
       </li>
-      <li>
-        <a class="nodefaultlinks" href="https://discord.com/" target="_blank">
+      <li class="footer__social-link">
+        <a class="a footer__social-link-discord" href="https://discord.com/" target="_blank">
           <i class="fa-brands fa-discord fa-2xl"></i>
         </a>
       </li>
-      <hr />
     </ul>
-    <p>
+    <hr class="footer__line"/>
+  </div>
+    <p class="footer__copyright">
       Copyright &copy; 2024 | Made with
       <span class="heart-unicode">&#10084;</span> by Amine EL HOUJJAJI
     </p>

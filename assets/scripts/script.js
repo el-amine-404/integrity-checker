@@ -1,14 +1,17 @@
-const output = document.querySelector("output");
-const file = document.getElementById("file");
-const fileList = document.getElementById("files-list");
-const numOfFiles = document.getElementById("num-of-files");
-const processingAnimation = document.getElementById("processingAnimation");
+const output = document.getElementById("form__output-file-hash");
+const outputLabel = document.getElementById("form__label-output-file-hash")
+const file = document.getElementById("form__input-file");
+const fileList = document.getElementById("form__wrapper-file-list");
+const numOfFiles = document.getElementById("form__number-of-files");
+const processingAnimation = document.getElementById("form__svg-animation-loading");
+const dropbox = document.getElementById("form__wrapper-drop-zone");
+const selectHash = document.getElementById("form__select-hash");
 
 let selectedHashFunction = "SHA-1"; // Default hash function
 
-let dropbox;
-
-dropbox = document.getElementById("dropbox");
+// Run the hashing function when the user selects one or more files or changes the hash function
+file.addEventListener("change", hashFilesAndUpdateOutput);
+selectHash.addEventListener("change", updateHashFunction);
 dropbox.addEventListener("dragenter", dragenter, false);
 dropbox.addEventListener("dragover", dragover, false);
 dropbox.addEventListener("drop", drop, false);
@@ -32,13 +35,6 @@ function drop(e) {
 
   hashFilesAndUpdateOutput();
 }
-
-
-// Run the hashing function when the user selects one or more files or changes the hash function
-file.addEventListener("change", hashFilesAndUpdateOutput);
-document
-  .getElementById("select-hash-function")
-  .addEventListener("change", updateHashFunction);
 
 
 async function showProcessingAnimation() {
@@ -75,7 +71,7 @@ function numberOfFiles() {
     numOfFiles.textContent = `${numFiles} File Selected`;
   } else {
     numOfFiles.textContent = `${numFiles} Files Selected`;
-    document.getElementById("label_result__file-hash").innerText = "Computed Hashes";
+    outputLabel.innerText = "Computed Hashes";
   }
 }
 
@@ -84,6 +80,12 @@ function numberOfFiles() {
 function listofFiles() {
   for (f of file.files){
     let listItem = document.createElement("li");
+    listItem.style.display = "flex";
+    listItem.style.justifyContent = "space-between";
+    listItem.style.background = "rgba(255, 255, 255, 0.15)";
+    listItem.style.padding = "0 4px";
+    listItem.style.marginBottom = ".5rem";
+
     let fileName = f.name;
 
     // Approximate to the closest prefixed unit
@@ -112,7 +114,7 @@ function listofFiles() {
           }`;
           // } (${f.size} bytes)`;
 
-    listItem.innerHTML=`<div class="selected-file-icon-name"><i class="fa-solid fa-file-lines"></i><p>${fileName}</p></div><p>${fileSize}</p>`;
+    listItem.innerHTML=`<div class="form__wrapper-fileIcon-name"><i class="fa-solid fa-file-lines"></i><p>${fileName}</p></div><p>${fileSize}</p>`;
 
     fileList.appendChild(listItem);
 
@@ -144,7 +146,7 @@ async function hashFilesAndUpdateOutput() {
 
 function updateHashFunction() {
   // Update the selected hash function based on the user's choice
-  selectedHashFunction = document.getElementById("select-hash-function").value;
+  selectedHashFunction = selectHash.value;
   // Re-calculate and update the hash for the existing files
   hashFilesAndUpdateOutput();
 }

@@ -8,7 +8,7 @@ For now i will only include the roadmap for me to ee the feautures i need to add
 
 This section list the features that need to be implemented in the future
 
-- [ ] Apply the BEM naming convention for CSS
+- [x] Apply the BEM naming convention for CSS
 - [ ] make website responsive
 - [ ] Optimize images for the web
 - [ ] Deploy the website
