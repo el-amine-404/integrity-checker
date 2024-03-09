@@ -172,6 +172,93 @@ tbody > tr:nth-of-type(even) {
   background-color: rgb(237 238 242);
 }
 
+#num-of-files {
+  font-size: .8rem;
+  font-weight: 400;
+  color: var(--clr-light);
+  margin-bottom: 2rem;
+}
+
+.selected-file-icon-name {
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  gap: 1em;
+}
+
+#files-list {
+  margin-bottom: 1.5rem;
+}
+
+#files-list > li{
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.6px);
+  -webkit-backdrop-filter: blur(6.6px);
+  border-radius: 2px;
+  padding: 1px 3px;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 1em;
+}
+
+/* https://loading.io/css/ */
+.loading-animation {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.loading-animation div {
+  display: inline-block;
+  position: absolute;
+  left: 8px;
+  width: 16px;
+  background: #fff;
+  animation: loading-animation 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+.loading-animation div:nth-child(1) {
+  left: 8px;
+  animation-delay: -0.24s;
+}
+.loading-animation div:nth-child(2) {
+  left: 32px;
+  animation-delay: -0.12s;
+}
+.loading-animation div:nth-child(3) {
+  left: 56px;
+  animation-delay: 0;
+}
+@keyframes loading-animation {
+  0% {
+    top: 8px;
+    height: 64px;
+  }
+  50%, 100% {
+    top: 24px;
+    height: 32px;
+  }
+}
+
+
+.label_animation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.label_animation > svg {
+  height: 1em;
+}
+
+#processingAnimation {
+  display: none;
+}
+
 .result__file-hash {
   background-color: #626383;
   color: #000000;
@@ -182,6 +269,7 @@ tbody > tr:nth-of-type(even) {
   display: block;
   overflow: auto;
   min-height: 1.4rem;
+  padding: 0 4px;
 }
 
 /* width */
@@ -249,7 +337,7 @@ input[type="file"] {
   padding: 3rem 0;
   cursor: pointer;
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: .1rem;
 }
 
 /* form {
