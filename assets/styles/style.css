@@ -490,7 +490,6 @@ Another way to do the same effect is the following
 .footer > p {
   text-align: center;
   user-select: none;
-  letter-spacing: 0.1em;
 }
 
 .nav-right a {
