@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
-
 /* || RESET */
 
 * {
@@ -56,9 +54,10 @@ html::-webkit-scrollbar {
 body {
   background-color: var(--clr-dark);
   color: var(--clr-light);
-  font-family: "Outfit", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
+  /* I went from using web fonts to self hosting to using system fonts 🤣 all for better loading speed. */
+  /* font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+  /* SOURCE: https://systemfontstack.com/ */
+  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
 }
 
 /* || UTILITIES */
@@ -118,6 +117,7 @@ BLOCK: header
 .header__nav {
   display: flex;
   justify-content: space-between;
+  font-weight: 600;
 }
 
 .header__left-nav {
@@ -132,7 +132,7 @@ BLOCK: header
 }
 
 .header__title {
-  font-weight: 600;
+  text-transform: uppercase;
 }
 
 .header__icon {
@@ -150,6 +150,7 @@ BLOCK: header
 .a--underline {
   position: relative;
   text-decoration: none;
+  text-transform: capitalize;
 }
 
 .a--underline::before {
@@ -199,6 +200,8 @@ BLOCK: hero
 
 .hero__title {
   font-size: 3rem;
+  font-family: 'Outfit';
+  font-weight: 600;
 }
 
 .hero__wrapper-buttons {
