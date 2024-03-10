@@ -197,7 +197,7 @@ BLOCK: hero
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 4rem;
 }
 
 .hero__wrapper-title-desc-btn {
