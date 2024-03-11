@@ -5,11 +5,11 @@
   justify-content: center;
   gap: 1.5em;
   text-align: center;
-  font-size: var(--size-base);
+  font-size: var(--size-sm);
 }
 
 .faqs__title {
-  font-size: var(--size-2xl);
+  font-size: var(--size-3xl);
   font-weight: 800;
   text-transform: capitalize;
   margin-top: 1em;
@@ -101,11 +101,11 @@ Another way to do the same effect is the following
 
 
   .faqs {
-    font-size: var(--size-xl);
+    font-size: var(--size-base);
   }
 
   .faqs__title {
-    font-size: var(--size-3xl);
+    font-size: var(--size-4xl);
   }
 
 
@@ -123,7 +123,7 @@ Another way to do the same effect is the following
 @media (min-width: 1024px) {
 
   .faqs {
-    font-size: var(--size-xl);
+    font-size: var(--size-base);
   }
 
   .faqs__title {
@@ -136,7 +136,7 @@ Another way to do the same effect is the following
 @media (min-width: 1280px) {
 
   .faqs {
-    font-size: var(--size-2xl);
+    font-size: var(--size-lg);
   }
 
   .faqs__title {

@@ -4,7 +4,7 @@
   flex-direction: column;
   align-items: center;
   gap: 1.5em;
-  font-size: var(--size-base);
+  font-size: var(--size-xs);
 }
 
 .footer__wrapper-hr-links {
@@ -41,8 +41,6 @@
 .footer__wrapper-copyright {
   text-align: center;
   user-select: none;
-  display: flex;
-  gap: 0.1em;
 }
 
 .footer__icon {
@@ -52,6 +50,7 @@
 .footer__icon__heart {
   width: 1em;
   color: red;
+  display: inline;
 }
 
 
@@ -70,7 +69,7 @@
 @media (min-width: 768px) {
 
   .footer {
-    font-size: var(--size-xl);
+    font-size: var(--size-sm);
   }
 
   .footer__line {

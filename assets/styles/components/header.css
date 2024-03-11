@@ -7,8 +7,6 @@
   background-color: var(--clr-blue-900);
 }
 
-
-
 .header__nav {
   display: flex;
   justify-content: space-between;
@@ -140,7 +138,7 @@
 @media (min-width: 1024px) {
 
   .header__nav {
-    font-size: var(--size-xl);
+    font-size: var(--size-lg);
   }
 
   .header__icon {

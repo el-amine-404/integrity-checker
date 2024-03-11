@@ -11,7 +11,7 @@
   -webkit-backdrop-filter: blur(6.6px);
   border-radius: 30px;
   padding: 1.5rem 2rem;
-  font-size: var(--size-base);
+  font-size: var(--size-sm);
   text-align: center;
 }
 
@@ -60,11 +60,11 @@
 }
 
 .form__drop-zone-icon {
-  width: var(--size-7xl);
+  width: var(--size-5xl);
 }
 
 .form__number-of-files {
-  font-size: var(--size-sm);
+  font-size: var(--size-xs);
   font-weight: 400;
   color: var(--clr-light);
   margin-bottom: 2em;
@@ -122,7 +122,7 @@
 
 .form__svg-animation-loading {
   display: none;
-  width: var(--size-xl);
+  width: var(--size-sm);
 }
 
 .form__output-file-hash {
@@ -131,7 +131,7 @@
   border-radius: 1px;
   border: 1px solid #000000;
   overflow: auto;
-  min-height: 1.4em;
+  min-height: 1.8em;
   padding: 0 0.2em;
   text-align: start;
 }
@@ -168,38 +168,38 @@
 @media (min-width: 768px) {
 
   .form {
-    font-size: var(--size-xl);
-  }
-
-  .form__drop-zone-icon {
-    width: var(--size-8xl);
-  }
-
-  .form__number-of-files {
     font-size: var(--size-base);
   }
 
+  .form__drop-zone-icon {
+    width: var(--size-6xl);
+  }
+
+  .form__number-of-files {
+    font-size: var(--size-sm);
+  }
+
   .form__icon-file {
-    width: var(--size-xl);
+    width: var(--size-lg);
   }
 
 
   .form__svg-animation-loading {
-    width: var(--size-2xl);
+    width: var(--size-base);
   }
 
 }
 
 /* lg */
-@media (min-width: 1024px) {
+/* @media (min-width: 1024px) {
 
-}
+} */
 
 /* xl */
 @media (min-width: 1280px) {
 
   .form {
-    font-size: var(--size-2xl);
+    font-size: var(--size-lg);
   }
 
   .form__element {
@@ -207,11 +207,11 @@
   }
 
   .form__drop-zone-icon {
-    width: var(--size-8xl);
+    width: var(--size-7xl);
   }
 
   .form__number-of-files {
-    font-size: var(--size-xl);
+    font-size: var(--size-sm);
   }
 
   .form__icon-file {
@@ -220,11 +220,11 @@
 
 
   .form__svg-animation-loading {
-    width: var(--size-3xl);
+    width: var(--size-lg);
   }
 
 }
 
 /* 2xl */
-@media (min-width: 1536px) {
-}
+/* @media (min-width: 1536px) {
+} */
