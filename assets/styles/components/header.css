@@ -1,0 +1,165 @@
+.header {
+  position: sticky;
+  top: 0px;
+  z-index: 1;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background-color: var(--clr-blue-900);
+}
+
+
+
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--size-xs);
+  font-weight: 600;
+  letter-spacing: -0.05em;
+}
+
+.header__nav-left {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.header__nav-right {
+  display: none
+}
+
+.header__title {
+  text-transform: uppercase;
+}
+
+.header__icon {
+  height: var(--size-base);
+  width: var(--size-base);
+}
+
+.header__link {
+  text-decoration: none;
+  color: var(--clr-light);
+}
+
+.header__menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 2em;
+  padding: 0;
+}
+
+.header__bars {
+  color: var(--clr-light);
+  width: var(--size-2xl);
+  height: var(--size-2xl);
+  display: block;
+  justify-self: flex-end;
+}
+
+.header__verion {
+  /*
+  SOURCE = https://dequeuniversity.com/rules/axe/4.8/color-contrast
+  Contrast Ratio = 7.00 : 1
+  */
+  color: #495564;
+  background-color: #F4F6F8;
+  font-size: var(--size-xxs);
+  border-radius: 50px;
+  padding: 0 0.5rem;
+  max-width: fit-content;
+}
+
+/* xs */
+/* @media (min-width: 475px) {
+
+} */
+
+/* sm */
+/* @media (min-width: 640px) {
+
+} */
+
+/* md */
+@media (min-width: 768px) {
+  .header__bars {
+    display: none;
+  }
+
+.header__nav {
+  font-size: var(--size-base);
+}
+
+.header__icon {
+  height: var(--size-xl);
+  width: var(--size-xl);
+}
+
+.header__verion {
+  font-size: var(--size-xs);
+}
+
+.header__nav-left {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.header__nav-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header__link--underline {
+  position: relative;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+.header__link--underline::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.header__link--underline:hover::before {
+  transform: scaleX(1);
+}
+
+}
+
+/* lg */
+@media (min-width: 1024px) {
+
+  .header__nav {
+    font-size: var(--size-xl);
+  }
+
+  .header__icon {
+    height: var(--size-2xl);
+    width: var(--size-2xl);
+  }
+
+  .header__verion {
+    font-size: var(--size-xs);
+  }
+
+}
+
+/* xl */
+/* @media (min-width: 1280px) {
+
+} */
+
+/* 2xl */
+/* @media (min-width: 1536px) {
+
+} */

@@ -4,71 +4,89 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Verify file integrity with confidence using Integrity Checker, an online tool that calculates hash of files (SHA1, SHA256, SHA384, SHA512) right in your browser without uploading the files">
+  <meta name="description"
+    content="Verify file integrity with confidence using Integrity Checker, an online tool that calculates hash of files (SHA1, SHA256, SHA384, SHA512) right in your browser without uploading the files">
   <link rel="icon" href="./assets/icons/favicon.svg" sizes="any" type="image/svg+xml" />
   <link rel="stylesheet" href="./assets/styles/modern-normalize.css" />
   <link rel="stylesheet" href="./assets/styles/style.css" />
+  <link rel="stylesheet" href="./assets/styles/components/header.css" />
+  <link rel="stylesheet" href="./assets/styles/components/hero.css" />
+  <link rel="stylesheet" href="./assets/styles/components/form.css" />
+  <link rel="stylesheet" href="./assets/styles/components/faqs.css" />
+  <link rel="stylesheet" href="./assets/styles/components/footer.css" />
+  <link rel="stylesheet" href="./assets/styles/utils.css" />
   <title>Integrity checker</title>
 </head>
 
 <body>
 
-  <header class="container header">
+  <header class="header container">
     <nav class="header__nav">
-      <div class="header__left-nav">
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" class="header__icon">
-          <path d="M33 3C26 0 18 0 18 0C18 0 10 0 3 3C-2.5034e-06 18 3 31 18 36C33 31 36 18 33 3Z" fill="#CCD6DD"/>
-          <path d="M18 33.884C6.412 29.729 1.961 19.831 4.76 4.444C11.063 2.029 17.928 2 18 2C18.071 2 24.958 2.04 31.24 4.444C34.039 19.831 29.588 29.729 18 33.884Z" fill="#55ACEE"/>
-          <path d="M31.24 4.444C24.958 2.04 18.071 2 18 2V33.884C29.588 29.729 34.039 19.831 31.24 4.444Z" fill="#226699"/>
+      <div class="header__nav-left">
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"
+          class="header__icon">
+          <path d="M33 3C26 0 18 0 18 0C18 0 10 0 3 3C-2.5034e-06 18 3 31 18 36C33 31 36 18 33 3Z" fill="#CCD6DD" />
+          <path
+            d="M18 33.884C6.412 29.729 1.961 19.831 4.76 4.444C11.063 2.029 17.928 2 18 2C18.071 2 24.958 2.04 31.24 4.444C34.039 19.831 29.588 29.729 18 33.884Z"
+            fill="#55ACEE" />
+          <path d="M31.24 4.444C24.958 2.04 18.071 2 18 2V33.884C29.588 29.729 34.039 19.831 31.24 4.444Z"
+            fill="#226699" />
         </svg>
-        <ul>
-          <li class="header__link li">
-            <a class="a header__title" href="?">integrity check</a>
+        <ul class="header__menu">
+          <li>
+            <a class="header__link header__title" href="?">integrity check</a>
           </li>
         </ul>
         <p class="header__verion">v 1.0</p>
       </div>
-      <ul class="header__right-nav">
-        <li class="header__link li">
-          <a class="a a--underline" href="#get-started">get started</a>
-        </li>
-      </ul>
+      <div class="header__nav-right">
+        <ul class="header__menu">
+          <li>
+            <a class="header__link header__link--underline" href="#get-started">get started</a>
+          </li>
+        </ul>
+      </div>
+      <button class="header__bars">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+          class="bi bi-list header__bars" viewBox="0 0 16 16">
+          <path fill-rule="evenodd"
+            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+        </svg>
+      </button>
     </nav>
   </header>
 
   <main>
-    <section class="hero container">
+    <section class="section hero container">
       <div class="hero__wrapper-title-desc-btn">
-        <h1 class="hero__title">verify file integrity with confidence</h1>
+        <h1 class="hero__title">verify file integrity<br>with confidence</h1>
         <p class="hero__description">
-          Ensure the security and integrity of your files <br />hassle-free.
-          No installation required all<br />
-          inside your browser
+          Ensure the security and integrity of your files hassle-free. <br>
+          No installation and no upload required all inside your browser
         </p>
         <div class="hero__wrapper-buttons">
-          <a class="a hero__btn hero__btn--fill" href="#get-started">get started</a>
-          <a class="a hero__btn hero__btn--ghost" href="#faqs">FAQs</a>
+          <a class="hero__btn hero__btn--fill" href="#get-started">get started</a>
+          <a class="hero__btn hero__btn--ghost" href="#faqs">FAQs</a>
         </div>
       </div>
-      <div>
-        <img
-          src="./assets/images/main.webp"
-          width="100%"
-          height="100%"
-          alt="Data Security vector illustration" />
-      </div>
+      <img class="hero__img" src="./assets/images/main.webp" width="100%" height="100%"
+        alt="Data Security vector illustration" />
     </section>
 
-    <section id="get-started" class="form container">
+    <section id="get-started" class="section form container">
       <h2 class="form__element form__title">are you ready ?</h2>
       <h3 class="form__element form__sub-title">take a step up and check your downloaded files</h3>
       <label class="form__element form__wrapper-drop-zone" id="form__wrapper-drop-zone" for="form__input-file">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 form__drop-zone-icon">
-          <path fill-rule="evenodd" d="M10.5 3.75a6 6 0 0 0-5.98 6.496A5.25 5.25 0 0 0 6.75 20.25H18a4.5 4.5 0 0 0 2.206-8.423 3.75 3.75 0 0 0-4.133-4.303A6.001 6.001 0 0 0 10.5 3.75Zm2.03 5.47a.75.75 0 0 0-1.06 0l-3 3a.75.75 0 1 0 1.06 1.06l1.72-1.72v4.94a.75.75 0 0 0 1.5 0v-4.94l1.72 1.72a.75.75 0 1 0 1.06-1.06l-3-3Z" clip-rule="evenodd" />
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
+          class="w-6 h-6 form__drop-zone-icon">
+          <path fill-rule="evenodd"
+            d="M10.5 3.75a6 6 0 0 0-5.98 6.496A5.25 5.25 0 0 0 6.75 20.25H18a4.5 4.5 0 0 0 2.206-8.423 3.75 3.75 0 0 0-4.133-4.303A6.001 6.001 0 0 0 10.5 3.75Zm2.03 5.47a.75.75 0 0 0-1.06 0l-3 3a.75.75 0 1 0 1.06 1.06l1.72-1.72v4.94a.75.75 0 0 0 1.5 0v-4.94l1.72 1.72a.75.75 0 1 0 1.06-1.06l-3-3Z"
+            clip-rule="evenodd" />
         </svg>
         <p class="form__element form__drop-zone-text">Click to choose file(s) to hash<br>Or drag and drop</p>
       </label>
-      <input class="form__element form__input-file visually-hidden" type="file" id="form__input-file" name="file" multiple required />
+      <input class="form__element form__input-file visually-hidden" type="file" id="form__input-file" name="file"
+        multiple required />
       <p id="form__number-of-files" class="form__element form__number-of-files">No Files Selected</p>
       <ul id="form__wrapper-file-list" class="form__element form__wrapper-file-list"></ul>
       <label class="form__element form__label-hash" for="form__select-hash">Choose Algorithm/Hash function</label>
@@ -79,15 +97,32 @@
         <option class="selectopt" value="SHA-512">SHA-512</option>
       </select>
       <div class="form__element form__wrapper-label-animation">
-        <label id="form__label-output-file-hash" class="form__label-output-file-hash" for="form__output-file-hash">Computed Hash</label>
+        <label id="form__label-output-file-hash" class="form__label-output-file-hash"
+          for="form__output-file-hash">Computed Hash</label>
         <!-- SOURCE: https://www.svgbackgrounds.com/ -->
-        <svg class="svg svg--small form__svg-animation-loading" id="form__svg-animation-loading" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><radialGradient id="a10" cx=".66" fx=".66" cy=".3125" fy=".3125" gradientTransform="scale(1.5)"><stop offset="0" stop-color="#66B9FF"></stop><stop offset=".3" stop-color="#66B9FF" stop-opacity=".9"></stop><stop offset=".6" stop-color="#66B9FF" stop-opacity=".6"></stop><stop offset=".8" stop-color="#66B9FF" stop-opacity=".3"></stop><stop offset="1" stop-color="#66B9FF" stop-opacity="0"></stop></radialGradient><circle transform-origin="center" fill="none" stroke="url(#a10)" stroke-width="30" stroke-linecap="round" stroke-dasharray="200 1000" stroke-dashoffset="0" cx="100" cy="100" r="70"><animateTransform type="rotate" attributeName="transform" calcMode="spline" dur="0.6" values="360;0" keyTimes="0;1" keySplines="0 0 1 1" repeatCount="indefinite"></animateTransform></circle><circle transform-origin="center" fill="none" opacity=".2" stroke="#66B9FF" stroke-width="30" stroke-linecap="round" cx="100" cy="100" r="70"></circle></svg>
+        <svg class="svg svg--small form__svg-animation-loading" id="form__svg-animation-loading"
+          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+          <radialGradient id="a10" cx=".66" fx=".66" cy=".3125" fy=".3125" gradientTransform="scale(1.5)">
+            <stop offset="0" stop-color="#66B9FF"></stop>
+            <stop offset=".3" stop-color="#66B9FF" stop-opacity=".9"></stop>
+            <stop offset=".6" stop-color="#66B9FF" stop-opacity=".6"></stop>
+            <stop offset=".8" stop-color="#66B9FF" stop-opacity=".3"></stop>
+            <stop offset="1" stop-color="#66B9FF" stop-opacity="0"></stop>
+          </radialGradient>
+          <circle transform-origin="center" fill="none" stroke="url(#a10)" stroke-width="30" stroke-linecap="round"
+            stroke-dasharray="200 1000" stroke-dashoffset="0" cx="100" cy="100" r="70">
+            <animateTransform type="rotate" attributeName="transform" calcMode="spline" dur="0.6" values="360;0"
+              keyTimes="0;1" keySplines="0 0 1 1" repeatCount="indefinite"></animateTransform>
+          </circle>
+          <circle transform-origin="center" fill="none" opacity=".2" stroke="#66B9FF" stroke-width="30"
+            stroke-linecap="round" cx="100" cy="100" r="70"></circle>
+        </svg>
       </div>
       <output class="form__element form__output-file-hash" id="form__output-file-hash"></output>
     </section>
 
-    <section id="faqs" class="faqs container">
-      <h2 class="faqs__title">frequently asked questions</h2>
+    <section id="faqs" class="section faqs container">
+      <h1 class="faqs__title">frequently asked questions</h1>
 
       <p class="faqs__description">
         A rule of thumb in Cybersecurity is to never trust a website or a tool
@@ -104,137 +139,145 @@
         performance. Some website even send the file to a server
       </p>
 
-      <details  class="faqs__details" class="faqs__details">
+      <details class="faqs__details" class="faqs__details">
         <summary class="faqs__summary">Why using our website ?</summary>
 
-          <ul class="faqs__wrapper-answers">
-            <li class="faqs__answer">
-              Web based wich means it is cross platform, no more instructions
-              for windows, for mac os, for linux, ...
-            </li>
-            <li class="faqs__answer">
-              Intuitive and easy to use UI, no more scary command line
-              commands
-            </li>
-            <li class="faqs__answer">No download, no configuration required, all browser based</li>
-            <li class="faqs__answer">
-              Your file never leaves your device, it is not uploaded to any
-              server all the magic happens inside the browser
-            </li>
-            <li class="faqs__answer">
-              No third party JS libraries, nowadays modern browsers have a
-              native crypto module, wich boost performance and security.
-            </li>
-            <li class="faqs__answer">
-              Our website is entirely open source, You do not need to take my
-              words for granted. with a little bit knowledge of web
-              technologies (HTML,CSS,JS) you can understand the code that runs
-              this website and be sure of the above claims
-            </li>
-          </ul>
+        <ul class="faqs__wrapper-answers">
+          <li class="faqs__answer">
+            Web based wich means it is cross platform, no more instructions
+            for windows, for mac os, for linux, ...
+          </li>
+          <li class="faqs__answer">
+            Intuitive and easy to use UI, no more scary command line
+            commands
+          </li>
+          <li class="faqs__answer">No download, no configuration required, all browser based</li>
+          <li class="faqs__answer">
+            Your file never leaves your device, it is not uploaded to any
+            server all the magic happens inside the browser
+          </li>
+          <li class="faqs__answer">
+            No third party JS libraries, nowadays modern browsers have a
+            native crypto module, wich boost performance and security.
+          </li>
+          <li class="faqs__answer">
+            Our website is entirely open source, You do not need to take my
+            words for granted. with a little bit knowledge of web
+            technologies (HTML,CSS,JS) you can understand the code that runs
+            this website and be sure of the above claims
+          </li>
+        </ul>
 
       </details>
 
-      <details  class="faqs__details">
+      <details class="faqs__details">
         <summary class="faqs__summary">Why should i check my download file integrity ?</summary>
 
-          <ul class="faqs__wrapper-answers">
-            <li class="faqs__answer">
-              Ensures that the file you downloaded is identical to the one the
-              creator intended to share. It protects against potential data
-              corruption during the download process.
-            </li>
-            <li class="faqs__answer">
-              Helps prevent the installation of compromised or malicious
-              software. If a file has been tampered with, it may contain
-              malware or other security threats.
-            </li>
-          </ul>
+        <ul class="faqs__wrapper-answers">
+          <li class="faqs__answer">
+            Ensures that the file you downloaded is identical to the one the
+            creator intended to share. It protects against potential data
+            corruption during the download process.
+          </li>
+          <li class="faqs__answer">
+            Helps prevent the installation of compromised or malicious
+            software. If a file has been tampered with, it may contain
+            malware or other security threats.
+          </li>
+        </ul>
 
       </details>
 
-      <details  class="faqs__details">
+      <details class="faqs__details">
         <summary class="faqs__summary">
           Where i can find the original checksum of my download ?
         </summary>
-          <ul class="faqs__wrapper-answers">
-            <li class="faqs__answer">
-              Check the official website or repository where you are
-              downloading the file. Often, developers provide checksums
-              alongside the download links.
-            </li>
-            <li class="faqs__answer">
-              Look for release notes or announcements related to the download.
-              Creators may publish checksums along with version information.
-            </li>
-          </ul>
+        <ul class="faqs__wrapper-answers">
+          <li class="faqs__answer">
+            Check the official website or repository where you are
+            downloading the file. Often, developers provide checksums
+            alongside the download links.
+          </li>
+          <li class="faqs__answer">
+            Look for release notes or announcements related to the download.
+            Creators may publish checksums along with version information.
+          </li>
+        </ul>
       </details>
 
-      <details  class="faqs__details">
+      <details class="faqs__details">
         <summary class="faqs__summary">Have a question in mind not listed here ?</summary>
 
-          <ul class="faqs__wrapper-answers">
-            <li class="faqs__answer">
-              Feel free to reach us on <a href="">Github</a> or
-              <a href="">Discord</a>, or contact me directly in my
-              <a href="">linkedin</a>
-            </li>
-          </ul>
+        <ul class="faqs__wrapper-answers">
+          <li class="faqs__answer">
+            Feel free to reach us on <a href="">Github</a> or
+            <a href="">Discord</a>, or contact me directly in my
+            <a href="">linkedin</a>
+          </li>
+        </ul>
 
       </details>
 
-      <details  class="faqs__details">
+      <details class="faqs__details">
         <summary class="faqs__summary">Next Step ?</summary>
 
-          <ul class="faqs__wrapper-answers">
-            <li class="faqs__answer">
-              you have verified the file integrity the next step is to verify
-              its authenticity &#128517;
-            </li>
-          </ul>
+        <ul class="faqs__wrapper-answers">
+          <li class="faqs__answer">
+            you have verified the file integrity the next step is to verify
+            its authenticity &#128517;
+          </li>
+        </ul>
 
       </details>
 
-      <details  class="faqs__details">
+      <details class="faqs__details">
         <summary class="faqs__summary">Like this website ?</summary>
-          <ul class="faqs__wrapper-answers">
-            <li class="faqs__answer">Star it on github</li>
-            <li class="faqs__answer">Share it on social media</li>
-            <li class="faqs__answer">Talk about it to your friends, family ...</li>
-            <li class="faqs__answer">want to be cool ? send me a nice comment</li>
-            <li class="faqs__answer">want to be extra cool ? Donate &#128525;</li>
-          </ul>
+        <ul class="faqs__wrapper-answers">
+          <li class="faqs__answer">Star it on github</li>
+          <li class="faqs__answer">Share it on social media</li>
+          <li class="faqs__answer">Talk about it to your friends, family ...</li>
+          <li class="faqs__answer">want to be cool ? send me a nice comment</li>
+          <li class="faqs__answer">want to be extra cool ? Donate &#128525;</li>
+        </ul>
 
       </details>
     </section>
   </main>
 
-  <footer class="footer container">
+  <footer class="footer section container">
     <div class="footer__wrapper-hr-links">
 
-      <hr class="footer__line"/>
+      <hr class="footer__line" />
       <ul class="footer__social-links">
         <li class="footer__social-link">
-          <a class="a footer__social-link-github" href="https://github.com/" target="_blank" aria-label="our github link">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github footer__icon" viewBox="0 0 16 16">
-              <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+          <a class="footer__social-link" href="https://github.com/" target="_blank"
+            aria-label="our github link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+              class="bi bi-github footer__icon" viewBox="0 0 16 16">
+              <path
+                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" />
             </svg>
-        </a>
-      </li>
-      <li class="footer__social-link">
-        <a class="a footer__social-link-discord" href="https://discord.com/" target="_blank" aria-label="our discord link">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-discord footer__icon" viewBox="0 0 16 16">
-            <path d="M13.545 2.907a13.2 13.2 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.2 12.2 0 0 0-3.658 0 8 8 0 0 0-.412-.833.05.05 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.04.04 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032q.003.022.021.037a13.3 13.3 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019q.463-.63.818-1.329a.05.05 0 0 0-.01-.059l-.018-.011a9 9 0 0 1-1.248-.595.05.05 0 0 1-.02-.066l.015-.019q.127-.095.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.05.05 0 0 1 .053.007q.121.1.248.195a.05.05 0 0 1-.004.085 8 8 0 0 1-1.249.594.05.05 0 0 0-.03.03.05.05 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.2 13.2 0 0 0 4.001-2.02.05.05 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.03.03 0 0 0-.02-.019m-8.198 7.307c-.789 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612m5.316 0c-.788 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612"/>
-          </svg>
-        </a>
-      </li>
-    </ul>
-    <hr class="footer__line"/>
-  </div>
+          </a>
+        </li>
+        <li class="footer__social-link">
+          <a class="footer__social-link" href="https://discord.com/" target="_blank"
+            aria-label="our discord link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+              class="bi bi-discord footer__icon" viewBox="0 0 16 16">
+              <path
+                d="M13.545 2.907a13.2 13.2 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.2 12.2 0 0 0-3.658 0 8 8 0 0 0-.412-.833.05.05 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.04.04 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032q.003.022.021.037a13.3 13.3 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019q.463-.63.818-1.329a.05.05 0 0 0-.01-.059l-.018-.011a9 9 0 0 1-1.248-.595.05.05 0 0 1-.02-.066l.015-.019q.127-.095.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.05.05 0 0 1 .053.007q.121.1.248.195a.05.05 0 0 1-.004.085 8 8 0 0 1-1.249.594.05.05 0 0 0-.03.03.05.05 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.2 13.2 0 0 0 4.001-2.02.05.05 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.03.03 0 0 0-.02-.019m-8.198 7.307c-.789 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612m5.316 0c-.788 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612" />
+            </svg>
+          </a>
+        </li>
+      </ul>
+      <hr class="footer__line" />
+    </div>
     <div class="footer__wrapper-copyright">
       <p>Copyright &copy; 2024 | Made with</p>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 footer__icon__heart">
-        <path d="m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0 1 12 5.052 5.5 5.5 0 0 1 16.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.247 15.247 0 0 1-.383.219l-.022.012-.007.004-.003.001a.752.752 0 0 1-.704 0l-.003-.001Z" />
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"
+        class="w-6 h-6 footer__icon__heart">
+        <path
+          d="m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0 1 12 5.052 5.5 5.5 0 0 1 16.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.247 15.247 0 0 1-.383.219l-.022.012-.007.004-.003.001a.752.752 0 0 1-.704 0l-.003-.001Z" />
       </svg>
       <p>by Amine EL HOUJJAJI</p>
     </div>

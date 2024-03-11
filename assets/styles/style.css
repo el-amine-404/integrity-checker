@@ -1,8 +1,36 @@
+/* || VARIABLES */
+
+:root {
+  /* COLORS */
+  /* https://tailwindcss.com/docs/customizing-colors */
+  --clr-dark: #000000;
+  --clr-light: #ffffff;
+  --clr-blue-400: #66b9ff;
+  --clr-blue-600: #4482e5;
+  --clr-blue-900: #000235;
+
+  /* SIZES */
+  --size-xxs: 0.5rem;
+  --size-xs: 0.75rem;
+  --size-sm: 0.875rem;
+  --size-base: 1rem;
+  --size-lg: 1.125rem;
+  --size-xl: 1.25rem;
+  --size-2xl: 1.5rem;
+  --size-3xl: 1.875rem;
+  --size-4xl: 2.25rem;
+  --size-5xl: 3rem;
+  --size-6xl: 3.75rem;
+  --size-7xl: 4.5rem;
+  --size-8xl: 6rem;
+  --size-9xl: 8rem;
+  --size-10xl: 10rem;
+}
+
 /* || RESET */
 
 * {
   margin: 0;
-  padding: 0;
   line-height: calc(1em + 0.5rem);
 }
 
@@ -26,16 +54,7 @@ button {
   color: inherit;
 }
 
-/* || VARIABLES */
 
-:root {
-  /* COLORS */
-  --clr-black: #000000;
-  --clr-dark: #000235;
-  --clr-light: #ffffff;
-  --clr-blue: #66b9ff;
-  --clr-blue-drk: #4482e5;
-}
 
 /* || GENERAL STYLES */
 
@@ -52,7 +71,7 @@ html::-webkit-scrollbar {
 }
 
 body {
-  background-color: var(--clr-dark);
+  background-color: var(--clr-blue-900);
   color: var(--clr-light);
   /* I went from using web fonts to self hosting to using system fonts 🤣 all for better loading speed. */
   /* SOURCE: vscode auto completion 😇 */
@@ -62,488 +81,4 @@ body {
   /* SOURCE: https://modernfontstacks.com/ */
   font-family: system-ui, sans-serif;
   font-weight: normal;
-}
-
-/* || UTILITIES */
-
-.container {
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  margin-bottom: 4rem;
-  /* border: red solid; */
-}
-
-.li {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.a {
-  text-decoration: none;
-  color: var(--clr-light);
-}
-
-.svg {
-  width: 22px;
-  height: 22px;
-  background-size: contain !important;
-  background-repeat: no-repeat !important;
-}
-
-.svg--small {
-  height: 1em;
-  width: 1em;
-}
-
-/* || Blocks */
-/* aka components */
-
-/*
-=====
-BLOCK: header
-=====
-*/
-
-.header {
-  position: sticky;
-  background-color: var(--clr-dark);
-  padding-top: 1.5rem;
-  padding-bottom: 0.5rem;
-  top: 0px;
-  z-index: 1;
-}
-
-.header__nav {
-  display: flex;
-  justify-content: space-between;
-  font-weight: 600;
-}
-
-.header__left-nav {
-  display: flex;
-  align-items: center;
-  gap: 0.5em;
-}
-
-.header__right-nav {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.header__title {
-  text-transform: uppercase;
-}
-
-.header__icon {
-  width: 1.5rem;
-}
-
-.header__verion {
-  /*
-  SOURCE = https://dequeuniversity.com/rules/axe/4.8/color-contrast
-  Contrast Ratio = 7.00 : 1
-  */
-  color: #495564;
-  background-color: #F4F6F8;
-  font-size: 0.5em;
-  border-radius: 50px;
-  padding: 0 0.5rem;
-  max-width: fit-content;
-}
-
-.a--underline {
-  position: relative;
-  text-decoration: none;
-  text-transform: capitalize;
-}
-
-.a--underline::before {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 100%;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: white;
-  transform: scaleX(0);
-  transition: transform 0.3s ease;
-}
-
-.a--underline:hover::before {
-  transform: scaleX(1);
-}
-
-/*
-=====
-BLOCK: hero
-=====
-*/
-
-/* || MODIFIERS */
-/* incremental style changes */
-
-/* Blocks with modifiers */
-
-/* || ELEMENTS */
-/* No standalone meaning - semantically tied to the block */
-/* Does not represent HTML structure (nested elements) */
-
-.hero {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 4rem;
-}
-
-.hero__wrapper-title-desc-btn {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.hero__title {
-  font-size: 3rem;
-  font-weight: 600;
-  text-transform: capitalize;
-}
-
-.hero__wrapper-buttons {
-  display: flex;
-  gap: 3rem;
-}
-
-.hero__btn {
-  border-radius: 50px;
-  flex-grow: 1;
-  font-weight: 500;
-  padding: 0.3rem 0;
-  text-align: center;
-  width: min-content;
-}
-
-.hero__btn--fill {
-  background-color: var(--clr-blue);
-  color: var(--clr-dark);
-  text-transform: capitalize;
-}
-
-.hero__btn--ghost {
-  background-color: var(--clr-dark);
-  color: var(--clr-blue);
-  border: 1px solid var(--clr-blue);
-  transition-duration: 0.4s;
-}
-
-.hero__btn--ghost:hover {
-  background-color: var(--clr-blue);
-  color: var(--clr-dark);
-}
-
-/*
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-=====
-BLOCK: form
-=====
-*/
-
-.form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  /* background-image: linear-gradient(285deg, #66B9FF,#4187CD, #002F74); */
-  /* From https://css.glass */
-  background: rgba(255, 255, 255, 0.15);
-  border-radius: 10px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(6.6px);
-  -webkit-backdrop-filter: blur(6.6px);
-  border-radius: 30px;
-  padding: 1.5rem 2rem;
-}
-
-.form__element {
-  width: 100%;
-}
-
-.form__title {
-  width: 100%;
-  color: var(--clr-blue);
-  font-weight: 600;
-  text-align: center;
-  margin-bottom: 0.5rem;
-  text-transform: uppercase;
-}
-
-.form__sub-title {
-  width: 100%;
-  text-align: center;
-  margin-bottom: 2rem;
-  color: var(--clr-blue);
-  text-transform: capitalize;
-}
-
-.visually-hidden {
-  position: absolute !important;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-  clip: rect(1px, 1px, 1px, 1px);
-}
-
-/* input.visually-hidden:is(:focus, :focus-within) + label {
-  outline: thin dotted;
-} */
-
-.form__wrapper-drop-zone {
-  border: 1px dashed #ccc;
-  padding: 3rem 0;
-  cursor: pointer;
-  text-align: center;
-  margin-bottom: 0.1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.form__drop-zone-icon {
-  width: 4rem;
-}
-
-.form__select-hash {
-  /* From https://css.glass */
-  color: var(--clr-black);
-  background-color: #9495AD;
-  border: 1px solid black;
-}
-
-.form__number-of-files {
-  font-size: 0.8rem;
-  font-weight: 400;
-  color: var(--clr-light);
-  margin-bottom: 2rem;
-  text-align: center;
-}
-
-.form__wrapper-fileIcon-name {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 1em;
-}
-
-.form__icon-file {
-  width: 1rem;
-}
-
-.form__wrapper-file-list {
-  margin-bottom: 1.5rem;
-}
-
-.form__file-list {
-  /* From https://css.glass */
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 10px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(6.6px);
-  -webkit-backdrop-filter: blur(6.6px);
-  border-radius: 2px;
-  padding: 1px 3px;
-  list-style-type: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  margin-bottom: 1em;
-}
-
-.form__wrapper-label-animation {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.form__svg-animation-loading {
-  display: none;
-}
-
-.form__output-file-hash {
-  color: var(--clr-black);
-  background-color: #9495AD;
-  border-radius: 1px;
-  border-color: #000000;
-  border-width: 1px;
-  border-style: solid;
-  display: block;
-  overflow: auto;
-  min-height: 1.4rem;
-  padding: 0 4px;
-}
-
-/* width */
-.form__output-file-hash::-webkit-scrollbar {
-  height: 0.3em;
-}
-
-/* Track */
-.form__output-file-hash::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-
-/* Handle */
-.form__output-file-hash::-webkit-scrollbar-thumb {
-  background: #888;
-}
-
-/* Handle on hover */
-.form__output-file-hash::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
-
-/*
-
-**************************************************************************************
-*/
-
-.faqs {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.faqs__title {
-  text-align: center;
-  text-transform: capitalize;
-}
-
-.faqs__description {
-  text-align: justify;
-}
-
-.faqs__details {
-  /* From https://css.glass */
-  background: rgba(255, 255, 255, 0.15);
-  border-radius: 10px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(6.6px);
-  -webkit-backdrop-filter: blur(6.6px);
-}
-
-.faqs__details:hover {
-  cursor: pointer;
-}
-
-.faqs__summary {
-  padding: 0.5em 1.3rem;
-  list-style: none;
-  display: flex;
-  justify-content: space-between;
-  transition: height 1s ease;
-}
-
-.faqs__summary::-webkit-details-marker {
-  display: none;
-}
-
-.faqs__summary:after {
-  content: "\002B";
-  margin-right: 0.4rem;
-}
-
-.faqs__details[open] .faqs__summary {
-  border-bottom: 1px solid #aaa;
-}
-
-.faqs__details[open] .faqs__summary:after {
-  content: "\00D7";
-}
-
-.faqs__answer {
-  /* instead of adding left padding to the div i decided to add left margin to the li element */
-  margin-left: 3rem;
-}
-
-.faqs__wrapper-answers {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  padding-right: 1rem;
-  list-style-type: "\1F449   ";
-}
-
-/*
-list-style-type is simpler but another way to do that is
-Another way to do the same effect is the following
-
-.faqs ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.faqs li::before {
-  content: '\1F449 ';
-}
-*/
-
-/*
-
-***************************************************************************************
-*/
-
-.footer {
-  margin-bottom: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.5rem;
-}
-
-.footer__wrapper-hr-links {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-}
-
-.footer__social-links {
-  display: flex;
-  justify-content: center;
-  align-items: baseline;
-  gap: 2rem;
-}
-
-.footer__social-link {
-  list-style: none;
-  transition: 0.5s;
-}
-
-.footer__social-link:hover {
-  transform: translateY(-10px);
-}
-
-.footer__line {
-  width: 6rem;
-}
-
-.footer__wrapper-copyright {
-  text-align: center;
-  user-select: none;
-  display: flex;
-  gap: 0.1em;
-}
-
-.footer__icon {
-  width: 2.5rem;
-}
-
-.footer__icon__heart {
-  color: red;
-  width: 1em;
 }

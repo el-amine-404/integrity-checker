@@ -1,0 +1,151 @@
+
+.faqs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5em;
+  text-align: center;
+  font-size: var(--size-base);
+}
+
+.faqs__title {
+  font-size: var(--size-2xl);
+  font-weight: 800;
+  text-transform: capitalize;
+  margin-top: 1em;
+}
+
+.faqs__description {
+  text-align: justify;
+}
+
+.faqs__details {
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.6px);
+  -webkit-backdrop-filter: blur(6.6px);
+  text-align: start;
+}
+
+.faqs__details:hover {
+  cursor: pointer;
+}
+
+.faqs__summary {
+  padding: 0.5em 1.3em;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  transition: height 1s ease;
+}
+
+.faqs__summary::-webkit-details-marker {
+  display: none;
+}
+
+.faqs__summary:after {
+  content: "\002B";
+}
+
+.faqs__details[open] .faqs__summary {
+  border-bottom: 1px solid #aaa;
+}
+
+.faqs__details[open] .faqs__summary:after {
+  content: "\00D7";
+}
+
+.faqs__answer {
+  /* instead of adding left padding to the div i decided to add left margin to the li element */
+  margin-left: 1em;
+}
+
+.faqs__wrapper-answers {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  padding-right: 2em;
+  text-align: justify;
+  list-style-type: "\1F449   ";
+}
+
+/*
+list-style-type is simpler but another way to do that is
+Another way to do the same effect is the following
+
+.faqs ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.faqs li::before {
+  content: '\1F449 ';
+}
+*/
+
+
+/* xs */
+/* @media (min-width: 475px) {
+
+} */
+
+/* sm */
+/* @media (min-width: 640px) {
+
+} */
+
+/* md */
+@media (min-width: 768px) {
+
+
+  .faqs {
+    font-size: var(--size-xl);
+  }
+
+  .faqs__title {
+    font-size: var(--size-3xl);
+  }
+
+
+  .faqs__wrapper-answers {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-right: 2em;
+    text-align: justify;
+    list-style-type: "\1F449   ";
+  }
+
+}
+
+/* lg */
+@media (min-width: 1024px) {
+
+  .faqs {
+    font-size: var(--size-xl);
+  }
+
+  .faqs__title {
+    font-size: var(--size-3xl);
+  }
+
+}
+
+/* xl */
+@media (min-width: 1280px) {
+
+  .faqs {
+    font-size: var(--size-2xl);
+  }
+
+  .faqs__title {
+    font-size: var(--size-4xl);
+  }
+
+}
+
+/* 2xl */
+/* @media (min-width: 1536px) {
+
+} */

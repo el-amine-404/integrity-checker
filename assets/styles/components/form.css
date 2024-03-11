@@ -1,0 +1,230 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* background-image: linear-gradient(285deg, #66B9FF,#4187CD, #002F74); */
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.6px);
+  -webkit-backdrop-filter: blur(6.6px);
+  border-radius: 30px;
+  padding: 1.5rem 2rem;
+  font-size: var(--size-base);
+  text-align: center;
+}
+
+.form__element {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  max-width: 800px;
+}
+
+.form__title {
+  color: var(--clr-blue-400);
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: .6em;
+}
+
+.form__sub-title {
+  color: var(--clr-blue-400);
+  text-transform: capitalize;
+  margin-bottom: 1.5em;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+/* input.visually-hidden:is(:focus, :focus-within) + label {
+  outline: thin dotted;
+} */
+
+.form__wrapper-drop-zone {
+  border: 1px dashed #ccc;
+  padding: 3em 0;
+  cursor: pointer;
+  text-align: center;
+  margin-bottom: 0.1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form__drop-zone-icon {
+  width: var(--size-7xl);
+}
+
+.form__number-of-files {
+  font-size: var(--size-sm);
+  font-weight: 400;
+  color: var(--clr-light);
+  margin-bottom: 2em;
+}
+
+.form__wrapper-fileIcon-name {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1em;
+}
+
+.form__icon-file {
+  width: var(--size-base);
+}
+
+.form__wrapper-file-list {
+  margin-bottom: 1.5rem;
+}
+
+.form__file-list {
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.6px);
+  -webkit-backdrop-filter: blur(6.6px);
+  border-radius: 2px;
+  padding: 1px 3px;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 1em;
+}
+
+.form__label-hash {
+  text-align: left;
+}
+
+.form__select-hash {
+  /* From https://css.glass */
+  color: var(--clr-dark);
+  background-color: #9495ad;
+  border: 1px solid var(--clr-dark);
+  padding: 0.2em 0.1em;
+  margin-bottom: 1em;
+}
+
+.form__wrapper-label-animation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form__svg-animation-loading {
+  display: none;
+  width: var(--size-xl);
+}
+
+.form__output-file-hash {
+  color: var(--clr-dark);
+  background-color: #9495ad;
+  border-radius: 1px;
+  border: 1px solid #000000;
+  overflow: auto;
+  min-height: 1.4em;
+  padding: 0 0.2em;
+  text-align: start;
+}
+
+/* width */
+.form__output-file-hash::-webkit-scrollbar {
+  height: 0.3em;
+}
+
+/* Track */
+.form__output-file-hash::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+.form__output-file-hash::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+.form__output-file-hash::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* xs */
+/* @media (min-width: 475px) {
+} */
+
+/* sm */
+/* @media (min-width: 640px) {
+} */
+
+/* md */
+@media (min-width: 768px) {
+
+  .form {
+    font-size: var(--size-xl);
+  }
+
+  .form__drop-zone-icon {
+    width: var(--size-8xl);
+  }
+
+  .form__number-of-files {
+    font-size: var(--size-base);
+  }
+
+  .form__icon-file {
+    width: var(--size-xl);
+  }
+
+
+  .form__svg-animation-loading {
+    width: var(--size-2xl);
+  }
+
+}
+
+/* lg */
+@media (min-width: 1024px) {
+
+}
+
+/* xl */
+@media (min-width: 1280px) {
+
+  .form {
+    font-size: var(--size-2xl);
+  }
+
+  .form__element {
+    max-width: 40em;
+  }
+
+  .form__drop-zone-icon {
+    width: var(--size-8xl);
+  }
+
+  .form__number-of-files {
+    font-size: var(--size-xl);
+  }
+
+  .form__icon-file {
+    width: var(--size-2xl);
+  }
+
+
+  .form__svg-animation-loading {
+    width: var(--size-3xl);
+  }
+
+}
+
+/* 2xl */
+@media (min-width: 1536px) {
+}
