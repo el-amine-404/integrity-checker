@@ -28,7 +28,6 @@
 
 } */
 
-
 .container {
   /* border: 1px solid red; */
   margin-left: auto;
@@ -87,5 +86,4 @@
   .container {
     max-width: 1536px;
   }
-
 }

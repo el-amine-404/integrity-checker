@@ -26,7 +26,7 @@
   color: var(--clr-blue-400);
   font-weight: 800;
   text-transform: uppercase;
-  margin-bottom: .6em;
+  margin-bottom: 0.6em;
 }
 
 .form__sub-title {
@@ -166,7 +166,6 @@
 
 /* md */
 @media (min-width: 768px) {
-
   .form {
     font-size: var(--size-base);
   }
@@ -183,11 +182,9 @@
     width: var(--size-lg);
   }
 
-
   .form__svg-animation-loading {
     width: var(--size-base);
   }
-
 }
 
 /* lg */
@@ -197,7 +194,6 @@
 
 /* xl */
 @media (min-width: 1280px) {
-
   .form {
     font-size: var(--size-lg);
   }
@@ -218,11 +214,9 @@
     width: var(--size-2xl);
   }
 
-
   .form__svg-animation-loading {
     width: var(--size-lg);
   }
-
 }
 
 /* 2xl */
