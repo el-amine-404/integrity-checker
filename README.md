@@ -9,12 +9,12 @@ For now i will only include the roadmap for me to ee the feautures i need to add
 This section list the features that need to be implemented in the future
 
 - [x] Apply the BEM naming convention for CSS
-- [ ] make website responsive
-- [ ] Optimize images for the web
+- [x] make website responsive
+- [x] Optimize images for the web
 - [ ] Deploy the website
-- [ ] Optimize the html, css, js file sizes
+- [x] Optimize the html, css, js file sizes
 - [x] add a proper drag && drop region 🤣
 - [x] add an animation while the file gets processed
-- [ ] Decrease the number of requests made by the browser:
+- [x] Decrease the number of requests made by the browser:
     - [x] download all the font-awesome icons used
     - [ ] reduce the number of `link` in html (not sure)
