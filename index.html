@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="./assets/styles/components/form.css" />
   <link rel="stylesheet" href="./assets/styles/components/faqs.css" />
   <link rel="stylesheet" href="./assets/styles/components/footer.css" />
+  <link rel="stylesheet" href="./assets/styles/components/mobile-nav.css" />
   <link rel="stylesheet" href="./assets/styles/utils.css" />
   <title>Integrity checker</title>
 </head>
@@ -46,7 +47,7 @@
           </li>
         </ul>
       </div>
-      <button class="header__bars" aria-label="menu">
+      <button id="hamburger_menu" class="header__bars" aria-label="menu">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
           class="bi bi-list header__bars" viewBox="0 0 16 16">
           <path fill-rule="evenodd"
@@ -57,7 +58,15 @@
   </header>
 
   <!-- Mobile Navigation -->
-
+  <div class="mobile-nav">
+    <nav>
+      <ul class="mobile-nav__menu">
+        <li>
+          <a class="mobile-nav__link" href="#get-started">get started</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
   <!-- End of Mobile Navigation -->
 
   <main>
@@ -287,6 +296,7 @@
   </footer>
 
   <script src="./assets/scripts/script.js"></script>
+  <script src="./assets/scripts/utils/mobile-nav.js"></script>
 </body>
 
 </html>

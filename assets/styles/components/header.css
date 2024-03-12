@@ -1,7 +1,7 @@
 .header {
   position: sticky;
   top: 0px;
-  z-index: 1;
+  z-index: 9999;
   padding-top: 2rem;
   padding-bottom: 2rem;
   background-color: var(--clr-blue-900);
@@ -52,7 +52,6 @@
   color: var(--clr-light);
   width: var(--size-2xl);
   height: var(--size-2xl);
-  display: block;
   justify-self: flex-end;
 }
 
