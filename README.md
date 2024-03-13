@@ -57,15 +57,14 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<div align="center">
-  <figure>
-      <img src="./integrity_checker.gif"
-          width="720"
-          alt="ScreenShot of the website"
-          title="Screnshot of the webiste">
-      <figcaption><i>Integrity Checker</i></figcaption>
-  </figure>
-</div>
+
+<figure>
+    <img align="center" src="./integrity_checker.gif"
+        width="720"
+        alt="ScreenShot of the website"
+        title="Screnshot of the webiste">
+    <figcaption><i>Integrity Checker</i></figcaption>
+</figure>
 
 
 An online SHA checksum generator wich eliminates the need to use third party tools or remember specific shell commands and offers the following features:
