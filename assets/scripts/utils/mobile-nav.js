@@ -1,12 +1,13 @@
-// SO ANSWER: https://stackoverflow.com/a/10811680
 function reloadScrollBars() {
-  document.documentElement.style.overflow = "auto"; // firefox, chrome
+  // SO ANSWER: https://stackoverflow.com/a/10811680
+  document.documentElement.style.overflow = "scroll"; // firefox, chrome
   document.body.scroll = "yes"; // ie only
 }
 
 function unloadScrollBars() {
   document.documentElement.style.overflow = "hidden"; // firefox, chrome
   document.body.scroll = "no"; // ie only
+  // SO ANSWER: https://stackoverflow.com/a/10811680
 }
 
 const headerBtn = document.querySelector(".header__bars");
@@ -35,6 +36,6 @@ mobileLinks.forEach((link) => {
   link.addEventListener("click", () => {
     isMobileNavOpen = false;
     mobileNav.style.display = "none";
-    document.body.style.overflowY = "auto";
+    reloadScrollBars();
   });
 });
