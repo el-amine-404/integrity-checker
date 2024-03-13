@@ -7,7 +7,7 @@
   <!-- Contributors -->
   <a href="https://github.com/el-amine-404/integrity-checker/graphs/contributors"><img src="https://img.shields.io/github/contributors/el-amine-404/integrity-checker.svg?style=for-the-badge"/></a>
   <!-- Forks -->
-  <a href="https://github.com/el-amine-404/integrity-checker/network/members"><img src="https://img.shields.io/github/forks/el-amine-404/integrity-checker.svg?style=for-the-badge"></a>
+  <a href="https://github.com/el-amine-404/integrity-checker/network/members"><img src="https://img.shields.io/github.com/el-amine-404/integrity-checker/network/members.svg?style=for-the-badge"></a>
   <!-- Stars -->
   <a href="https://github.com/el-amine-404/integrity-checker/stargazers"><img src="https://img.shields.io/github/stars/el-amine-404/integrity-checker.svg?style=for-the-badge"/></a>
   <!-- issues -->
