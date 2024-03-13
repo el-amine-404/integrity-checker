@@ -59,12 +59,21 @@
 
 
 <figure>
-    <img align="center" src="./integrity_checker.gif"
+    <img src="./integrity_checker.gif"
         width="720"
         alt="ScreenShot of the website"
         title="Screnshot of the webiste">
     <figcaption><i>Integrity Checker</i></figcaption>
 </figure>
+
+
+<div align="center">
+  <img src="./integrity_checker.gif"
+        width="720"
+        alt="ScreenShot of the website"
+        title="Screnshot of the webiste">
+  <p><i>Integrity Checker</i></p>
+</div>
 
 
 An online SHA checksum generator wich eliminates the need to use third party tools or remember specific shell commands and offers the following features:
