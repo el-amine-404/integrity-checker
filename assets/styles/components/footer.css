@@ -25,6 +25,7 @@
 }
 
 .footer__social-link {
+  text-decoration: none;
   list-style: none;
   transition: 0.5s;
   color: var(--clr-light);
