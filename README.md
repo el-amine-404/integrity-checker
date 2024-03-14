@@ -31,7 +31,7 @@
     <!-- <a href="https://github.com/el-amine-404/integrity-checker"><strong>Explore the docs »</strong></a>
     <br /> -->
     <br />
-    <a href="https://github.com/el-amine-404/integrity-checker">View Live Demo</a>
+    <a href="https://integrity-checker.pages.dev">View Live Demo</a>
     ·
     <a href="https://github.com/el-amine-404/integrity-checker/issues">Report Bug</a>
     ·
