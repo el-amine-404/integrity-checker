@@ -1,0 +1,17 @@
+{
+  "name": "integrity-checker",
+  "version": "0.1.0",
+  "description": "checksum calculator",
+  "main": "index.html",
+  "scripts": {
+    "postcss:watch": "postcss src/assets/css/main.css --dir dist/assets/css --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cssnano": "^6.1.0",
+    "postcss": "^8.4.37",
+    "postcss-cli": "^11.0.0",
+    "postcss-import": "^16.0.1"
+  }
+}

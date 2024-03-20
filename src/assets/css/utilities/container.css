@@ -36,11 +36,6 @@
   padding-right: 1rem;
 }
 
-/* The gap between sections */
-.section {
-  margin-top: 5em;
-}
-
 /* xs */
 @media (min-width: 475px) {
   .container {
@@ -74,10 +69,6 @@
 @media (min-width: 1280px) {
   .container {
     max-width: 1280px;
-  }
-
-  .section {
-    margin-top: 3em;
   }
 }
 
