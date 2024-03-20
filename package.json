@@ -4,6 +4,7 @@
   "description": "checksum calculator",
   "main": "index.html",
   "scripts": {
+    "postcss:build": "postcss src/assets/css/main.css --dir dist/assets/css",
     "postcss:watch": "postcss src/assets/css/main.css --dir dist/assets/css --watch"
   },
   "author": "",
