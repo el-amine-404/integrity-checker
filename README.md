@@ -22,7 +22,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/el-amine-404/integrity-checker">
-    <img src="./website/assets/icons/favicon.svg" alt="Logo" width="80" height="80">
+    <img src="./doc_images/icon.svg" alt="Logo" width="80" height="80">
   </a>
   <h3 align="center">INTEGRITY CHECKER</h3>
     <p align="center">
